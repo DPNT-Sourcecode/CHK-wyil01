@@ -79,8 +79,21 @@ public class CheckoutSolution {
 
 	private int costItem(String item) {
 		
+		int returnValue = 0;
+		int quantity = item.charAt(0);
+		String itemName = Character.toString( item.charAt(1));
 		
+		for(SKUItem skuItem : skuList) {
+			if(skuItem.itemName.equals(itemName)) {
+				int numberOfQualifiedOffers = quantity / skuItem.quantityForOfferPrice;
+				int remainderAtNormalPrice = quantity % skuItem.quantityForOfferPrice;
+				
+				returnValue = numberOfQualifiedOffers * skuItem.itemOfferPrice + remainderAtNormalPrice * skuItem.itemPrice;
+			}
+			
+		}
 		
-		return 0;
+		return returnValue ;
 	}
 }
+
