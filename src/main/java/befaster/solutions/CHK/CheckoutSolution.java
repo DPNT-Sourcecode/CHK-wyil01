@@ -78,9 +78,14 @@ public class CheckoutSolution {
 		//Quantity 
 		int quantity = itemFields[0];
 		char itemName = itemFields[1];
+		
+		// FEEL I COULD HAVE DONE THIS EASIER!
 
 		for(SKUItem skuItem : skuList)	{
-			if(itemName == skuItem.itemName)
+			if(itemName == skuItem.itemName.charAt(0))
+			{
+	//			skuItem.itemPrice
+			}
 			
 		}
 		
@@ -88,4 +93,5 @@ public class CheckoutSolution {
 		return 0;
 	}
 }
+
 
