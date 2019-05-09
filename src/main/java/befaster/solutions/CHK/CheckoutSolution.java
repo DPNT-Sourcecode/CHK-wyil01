@@ -60,9 +60,32 @@ public class CheckoutSolution {
 	public Integer checkout(String skus) {
 		int result = 290;
 		// Example string "4A,3B,C,D"
-//		String[] basket = skus.split(",");
-	//	basket.length
+		String[] basket = skus.split(",");
+		
+		for(String item : basket)
+		{
+			result = costItem(item);
+		}
+		
 		
     	return result;    
     }
+
+	private int costItem(String item) {
+		// TODO Auto-generated method stub
+		char[] itemFields =item.toCharArray();
+		
+		//Quantity 
+		int quantity = itemFields[0];
+		char itemName = itemFields[1];
+
+		for(SKUItem skuItem : skuList)	{
+			if(itemName == skuItem.itemName)
+			
+		}
+		
+		
+		return 0;
+	}
 }
+
