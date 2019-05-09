@@ -1,6 +1,7 @@
 package befaster.solutions.CHK;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import befaster.runner.SolutionNotImplementedException;
@@ -63,7 +64,14 @@ public class CheckoutSolution {
     
 	public Integer checkout(String skus) {
 		// Example string "4A,3B,C,D"
-		int returnValue =290;
+		int returnValue =0;
+		
+		List<String> items = Arrays.asList( skus.split(","));
+		
+		for(String item :items )
+		{
+			returnValue += costItem(item);
+		}
 		
 		return returnValue;
 		    
@@ -76,6 +84,7 @@ public class CheckoutSolution {
 		return 0;
 	}
 }
+
 
 
 
