@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 import befaster.solutions.HLO.HelloSolution;
 
@@ -20,8 +21,9 @@ public class HelloSolutionTest {
 	    }
 	@Test
 	public void test() {
-		assertThat(hello.hello("Andy"), equals("Hello Andy") );
+		assertThat(hello.hello("Andy").toString(), equalTo("Hello Andy") );
 	}
 
 }
+
 
