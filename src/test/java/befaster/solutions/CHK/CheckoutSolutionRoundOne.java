@@ -30,9 +30,10 @@ public class CheckoutSolutionRoundOne {
 	@Test
 	public void test() {
 		
-		assertThat(chkSol.checkout("4A,3B,C,D"), equalTo(300));
+		assertThat(chkSol.checkout("4A,3B,C,D"), equalTo(290));
 		
 	}
 
 }
+
 
