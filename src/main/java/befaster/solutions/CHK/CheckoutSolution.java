@@ -20,7 +20,8 @@ import befaster.runner.SolutionNotImplementedException;
 class SKUItem {
 	public String itemName;
 	public int itemPrice;
-	public String itemOffer;
+	public int itemOfferPrice;
+	public String quantityForOfferPrice;
 };
 	
 
@@ -58,40 +59,17 @@ public class CheckoutSolution {
 	}
     
 	public Integer checkout(String skus) {
-		int result = 290;
 		// Example string "4A,3B,C,D"
-		String[] basket = skus.split(",");
-		
-		for(String item : basket)
-		{
-			result = costItem(item);
-		}
-		
-		
-    	return result;    
+		    
     }
 
 	private int costItem(String item) {
-		// TODO Auto-generated method stub
-		char[] itemFields =item.toCharArray();
 		
-		//Quantity 
-		int quantity = itemFields[0];
-		char itemName = itemFields[1];
-		
-		// FEEL I COULD HAVE DONE THIS EASIER!
-
-		for(SKUItem skuItem : skuList)	{
-			if(itemName == skuItem.itemName.charAt(0))
-			{
-	//			skuItem.itemPrice
-			}
-			
-		}
 		
 		
 		return 0;
 	}
 }
+
 
 
